@@ -57,7 +57,7 @@ p {
 .card-plan {
   background-color: var(--very-pale-blue);
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
