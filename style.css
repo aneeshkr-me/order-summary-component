@@ -12,11 +12,13 @@
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
 }
-
+html{
+  background: var(--pale-blue);
+}
 body {
   font-size: 16px;
+  background: url("/images/pattern-background-mobile.svg") no-repeat top/contain;
   font-family: "Red Hat Display", sans-serif;
-  background: var(--pale-blue);
   min-height: 100vh;
   display: grid;
   place-items: center;
@@ -103,6 +105,9 @@ p {
   color: var(--dark-blue);
 }
 @media screen and (min-width: 768px) {
+  body{
+    background: url("/images/pattern-background-desktop.svg") no-repeat top/contain;
+  }
   .card-body{
     padding: 3rem;
   }
