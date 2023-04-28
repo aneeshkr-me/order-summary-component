@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500,700,900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --bright-blue-80: hsla(245, 75%, 52%,80%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  background: var(--pale-blue);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+body::after {
+  content: "";
+  background: url("/images/pattern-background-mobile.svg");
+  position: absolute;
+}
+h1 {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+p {
+  color: var(--desaturated-blue);
+  line-height: 1.5;
+}
+.card {
+  margin: 1.5rem;
+  background: white;
+  max-width: 450px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card-header img {
+  width: 100%;
+}
+.card-body {
+  text-align: center;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+.card-plan {
+  background-color: var(--very-pale-blue);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-plan-body{
+  display: flex;
+  align-items: center;
+}
+.card-plan-text{
+  margin-left: 1rem;
+}
+.card-plan-text h2 {
+  font-size: 0.875rem;
+}
+.card-plan-change a{
+  color: var(--bright-blue);
+  text-decoration: underline;
+  font-weight: 700;
+}
+.card-plan-change a:hover{
+  color: var(--bright-blue-80);
+  text-decoration: none;
+}
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary {
+  background-color: var(--bright-blue);
+  color: white;
+  box-shadow: 0 1rem 1rem hsla(245, 75%, 52%, 20%);
+}
+.btn-primary:hover {
+  background-color: var(--bright-blue-80);
+}
+.btn-secondary {
+  background: none;
+  color: var(--desaturated-blue);
+}
+.btn-secondary:hover {
+  color: var(--dark-blue);
+}
+@media screen and (min-width: 768px) {
+  .card-body{
+    padding: 3rem;
+  }
+}
